@@ -389,7 +389,7 @@ button {
 /* section 1 */
 
 .first-section {
-    padding: 188px 0;
+    padding: 72px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-mob.jpg);
     max-width: 320px;
     background-repeat: no-repeat;
@@ -429,7 +429,7 @@ button {
 
 .section-title-main {
     position: relative;
-    max-width: 496px;
+    max-width: 216px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -437,17 +437,15 @@ button {
     text-align: center;
     color: #fff;
     margin: 0 auto;
-    padding-left: 52px;
-    padding-right: 52px;
-    padding-top: 72px;
+    margin-bottom: 72px;
 }
 
 
 @media screen and (min-width: 768px) {
 .first-section {
-    padding: 188px 0;
+    padding: 112px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-tablet.jpg);
-    max-width: 678px;
+    max-width: 768px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -492,11 +490,8 @@ button {
 .section-title-main {
     max-width: 496px;
     font-size: 56px;
-    line-height: 1.7;
-    margin: 0 auto;
-    padding-left: 136px;
-    padding-right: 136px;
-    padding-top: 112px;
+    line-height: 1.17;
+    margin: 0 auto 36px auto;
 }
 }
 
@@ -567,15 +562,11 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 96px;
 }
 
 /* Кожен елемент списку */
-.features-item {
-    margin-right: 16px;
-    margin-left: 16px;
+.features-item:not(:last-child) {
     margin-bottom: 72px;
-    text-align: center;
 }
 
 .icon {
@@ -604,19 +595,23 @@ button {
 
 @media screen and (min-width: 768px) {
 
+.features-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+ }
+
 .features-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 96px;
+    gap: 72px 24px;
     justify-content: space-between;
 }
 
 .features-item {
     flex: 1 1 calc(50% - 32px);
-    margin: 16px;
     text-align: left;
 }
 
@@ -631,6 +626,7 @@ button {
     line-height: 1.11;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .item-text {
@@ -676,10 +672,296 @@ button {
     border-radius: 4px;
     border: 1px solid #8e8f99;
     margin-bottom: 8px;
-
-}
 }
 
+.features-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
 
+.item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+}
+
+
+/* section 4 */
+
+
+/* Загальні стилі для секції */
+.team-section {
+    padding: 60px 0;
+    background-color: #f4f4fd;
+}
+
+.section-title-team {
+    font-weight: 700;
+    font-size: 36px;    
+    text-align: center;
+    margin-top: 96px;
+    margin-bottom: 72px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+}
+
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.team-item {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    max-width: 360px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-item img {
+    width: 100%;
+    height: auto;
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin: 10px 0;
+}
+
+.team-role {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #434455;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 15px;
+    list-style: none;
+}
+
+.social-networks {
+    margin: 0 10px;
+}
+
+.social-link {
+    width: 200%;
+    height: 200%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 24px;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+
+.icon-name {
+    fill: #f4f4fd;
+}
+
+
+@media screen and (min-width: 768px) {
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 64px;
+    list-style: none;
+    padding: 0;
+}
+
+}
+
+
+
+@media screen and (min-width: 1158px) {
+
+.team-section {
+    padding: 120px 0;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    color: #2e2f42;
+    margin-bottom: 72px;
+}
+
+.team-section ul {
+    display: flex;
+    gap: 24px;
+}
+
+/* Оформлення для кожного контейнера працівника */
+.team-info {
+    padding: 32px 0;
+}
+
+/* Оформлення заголовка (ім'я працівника) */
+.team-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Оформлення параграфа (посада) */
+.team-role {
+    text-align: center;
+    font-size: 14px;
+    color: #434455;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    width: 250%;
+    height: 250%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+}
+
+
+
+.additional-section.section-light {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-portfolio {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+
+.app-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.app-item {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 360px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background-color: #fff;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.text-img {
+    position: absolute;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    transform: translateY(100%);
+    transition: transform 300ms ease;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-cover-wraper {
+    position: relative;
+    overflow: hidden;
+}
+
+.app-item:hover .text-img {
+    transform: translateY(0);
+}
+
+.app-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.app-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin: 10px 0;
+}
+
+.app-category {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455; 
+}
 
 
