@@ -203,10 +203,6 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.email-header {
-    margin-bottom: 12px;
-}
-
 .nav-link:hover,
 .nav-link:focus,
 .contact-link:hover,
@@ -215,6 +211,13 @@ button {
     color: #404bbf;
 }
 }
+
+@media screen and (max-width: 1157px) {
+.email-header {
+    padding-bottom: 12px;
+}
+}
+
 
 @media screen and (min-width: 1158px) {
 .header-logo {
@@ -265,6 +268,7 @@ button {
     flex-direction: column;
     height: 100%;
 }
+
 
 /* Button close */
 
@@ -1000,7 +1004,6 @@ button {
 
 .footer-content {
     justify-content: center;
-    justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -1015,6 +1018,7 @@ button {
     color: #4d5ae5;
     text-decoration: none;
     justify-content: center;
+    margin-left: 70px;
 }
 
 .logo-part {
@@ -1025,10 +1029,6 @@ button {
     text-transform: uppercase;
     color: #f4f4fd;
     justify-content: center;
-}
-
-.footer-text-logo {
-    text-align: center;
 }
 
 .footer-logo-text {
@@ -1066,7 +1066,6 @@ button {
 .social-networks {
     width: 40px;
     height: 40px;
-    margin-left: 16px;
     justify-content: center;
 }
 
@@ -1099,9 +1098,8 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     text-align: center;
-    margin-top: 72px;
     margin-bottom: 16px;
-    padding: 10px;
+
 }
 
 .form-container {
@@ -1114,6 +1112,7 @@ button {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 16px;
 }
 
 .input-field {
@@ -1165,14 +1164,26 @@ button {
     fill: #fff;
 }
 
+@media screen and (max-width: 767px) {
+.footer-text {
+    margin-top: 72px;
+}
+
+.form-text {
+    margin-top: 72px;
+}
+}
 
 
 @media screen and (min-width: 768px) {
 
 .container.footer-content {
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: unset;
+    gap: 72px 24px;
+    justify-content: flex-start;
+    max-width: 584px;
 }
 
 .footer-text-logo {
@@ -1188,7 +1199,7 @@ button {
 }
 
 .footer-text {
-    text-align: center;
+    text-align: left;
 }
 
 .footer-list {
@@ -1208,6 +1219,7 @@ button {
 
 .form-text {
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .input-field {
@@ -1226,6 +1238,7 @@ button {
     align-items: center;
     gap: 5px;
     padding: 10px 20px;
+    margin-bottom: 16px;
 }
 
 .button-text {
@@ -1236,6 +1249,15 @@ button {
 
 
 @media screen and (min-width: 1158px) {
+
+.container.footer-content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: unset;
+    justify-content: flex-start;
+    max-width: 1158px;
+}
 
 .page-footer {
     background-color: #2e2f42;
@@ -1269,7 +1291,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
-    text-align: center;
+    text-align: left;
 }
     
 .footer-list {
